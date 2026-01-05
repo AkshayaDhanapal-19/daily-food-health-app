@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PAGE 1 : INPUT PAGE -->
+  <div id="page-input" class="page active container">
+    <h1>Daily Food Health App</h1>
+
+    <label>What did you eat today?</label>
+    <input type="text" id="foodInput" placeholder="Eg: samosa, tea, rice">
+
+    <label>Enter your food budget (₹):</label>
+    <input type="number" id="budgetInput" placeholder="Eg: 120">
+
+    <button onclick="analyzeFood()">Analyze My Food</button>
+  </div>
+
+  <!-- PAGE 2 : SUMMARY PAGE -->
+  <div id="page-summary" class="page container">
+  <h1>Today's Summary</h1>
+
+  <div id="summaryContent"></div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button onclick="showPage('page-input')">← Previous</button>
+    <button onclick="showPage('page-feedback')">Next →</button>
+  </div>
+  </div>
+
+
+  <!-- PAGE 3 : FEEDBACK PAGE -->
+  <div id="page-feedback" class="page container">
+    <h1>Health Feedback</h1>
+    <div id="feedbackContent"></div>
+    <button onclick="showPage('page-summary')">← Previous</button>
+    <button onclick="showPage('page-suggestions')">Next ➜</button>
+  </div>
+
+  <!-- PAGE 4 : SUGGESTIONS PAGE -->
+  <div id="page-suggestions" class="page container">
+    <h1>Suggestions</h1>
+    <div id="suggestionContent"></div>
+    <button onclick="showPage('page-feedback')">← Previous</button>
+    <button class="reset-btn" onclick="resetApp()">Start Over</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Mini Project – Daily Food Health App</p>
+    <p>ECE + AI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
